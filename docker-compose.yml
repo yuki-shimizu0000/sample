@@ -1,0 +1,42 @@
+services:
+  mysql:
+    image: mysql:8.0
+    build: 
+      context: ./mysql
+      dockerfile: Dockerfle
+    ports:
+      - "43306:3306"
+    environment:
+      TZ: Asia/Tokyo
+      MYSQL_ROOT_PASSWORD: example
+      MYSQL_DATABASE: database
+      MYSQL_USER: user
+      MYSQL_PASSWORD: password
+    volumes:
+      # テーブル作成
+      - ./mysql/init:/docker-entrypoint-initdb.d
+      - ./mysql/my.cnf:/etc/mysql/conf.d/my.cnf
+    command: mysqld --character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci
+    healthcheck:
+      test: ["CMD-SHELL", "mysqladmin ping -h localhost"]
+      interval: 10s
+      retries: 5
+    restart: always
+
+  web:
+    image: openjdk:21
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "48080:8080"
+    depends_on:
+      - mysql
+  
+  docs:
+    build:
+      context: ./docs         # Dockerfile がある場所
+      dockerfile: Dockerfile  # Dockerfile の名前を指定
+    volumes:
+      - ./docs:/usr/src/app/docs
+    command: pandoc /usr/src/app/docs/database_design.md -o /usr/src/app/docs/database_design.html

@@ -1,0 +1,19 @@
+@startuml
+entity "classes" as classes {
++ class_id : int
+--
+* class_name : varchar
+}
+
+entity "students" as students {
++ student_id : int
+--
+# class_id<<FK>> : int
+--
+* student_name : varchar
+* login_id : varchar
+* teacher_id : int
+}
+
+students ||--|{ classes
+@enduml

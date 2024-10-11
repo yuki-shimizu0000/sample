@@ -1,0 +1,154 @@
+フォルダー パスの一覧
+ボリューム シリアル番号は FA55-341D です
+D:.
+|   .gitignore
+|   directory_structure.txt
+|   docker-compose.yml
+|   Dockerfile
+|   HELP.md
+|   mvnw
+|   mvnw.cmd
+|   pom.xml
+|   README.md
+|   wait-for-it.sh
+|   
++---.mvn
+|   \---wrapper
+|           maven-wrapper.properties
+|           
++---.vscode
+|       launch.json
+|       settings.json
+|       
++---docs
+|   |   amazon-corretto-21-x64-linux-jdk.tar.gz
+|   |   Dockerfile
+|   |   
+|   \---image
+|           er.pu
+|           
++---mysql
+|   |   Dockerfle
+|   |   my.cnf
+|   |   
+|   \---init
+|           init.sql
+|           
++---src
+|   +---main
+|   |   +---java
+|   |   |   \---com
+|   |   |       \---example
+|   |   |           \---demo
+|   |   |               |   DemoApplication.java
+|   |   |               |   
+|   |   |               +---controller
+|   |   |               |       StudentController.java
+|   |   |               |       
+|   |   |               +---entity
+|   |   |               |       StudentInfo.java
+|   |   |               |       
+|   |   |               +---exception
+|   |   |               |       CustomExceptionHandler.java
+|   |   |               |       
+|   |   |               +---repository
+|   |   |               |       StudentRepository.java
+|   |   |               |       
+|   |   |               \---service
+|   |   |                       StudentService.java
+|   |   |                       
+|   |   \---resources
+|   |       |   application.properties
+|   |       |   
+|   |       +---static
+|   |       \---templates
+|   \---test
+|       \---java
+|           \---com
+|               \---example
+|                   \---demo
+|                       |   DemoApplicationTests.java
+|                       |   
+|                       +---controller
+|                       |       StudentControllerTest.java
+|                       |       
+|                       +---repository
+|                       |       StudentRepositoryTest.java
+|                       |       
+|                       \---service
+|                               StudentServiceTest.java
+|                               
+\---target
+    |   demo-0.0.1-SNAPSHOT.jar
+    |   demo-0.0.1-SNAPSHOT.jar.original
+    |   
+    +---classes
+    |   |   application.properties
+    |   |   
+    |   \---com
+    |       \---example
+    |           \---demo
+    |               |   DemoApplication.class
+    |               |   
+    |               +---controller
+    |               |       StudentController.class
+    |               |       
+    |               +---entity
+    |               |       StudentInfo.class
+    |               |       
+    |               +---exception
+    |               |       CustomExceptionHandler.class
+    |               |       
+    |               +---repository
+    |               |       StudentRepository.class
+    |               |       
+    |               \---service
+    |                       StudentService.class
+    |                       
+    +---generated-sources
+    |   \---annotations
+    +---generated-test-sources
+    |   \---test-annotations
+    +---maven-archiver
+    |       pom.properties
+    |       
+    +---maven-status
+    |   \---maven-compiler-plugin
+    |       +---compile
+    |       |   \---default-compile
+    |       |           createdFiles.lst
+    |       |           inputFiles.lst
+    |       |           
+    |       \---testCompile
+    |           \---default-testCompile
+    |                   createdFiles.lst
+    |                   inputFiles.lst
+    |                   
+    +---surefire-reports
+    |       2024-10-09T22-53-10_813.dumpstream
+    |       2024-10-11T01-00-11_060.dumpstream
+    |       2024-10-11T01-04-04_111.dumpstream
+    |       2024-10-11T01-34-07_018.dumpstream
+    |       2024-10-11T01-34-34_785.dumpstream
+    |       com.example.demo.controller.StudentControllerTest.txt
+    |       com.example.demo.DemoApplicationTests.txt
+    |       com.example.demo.repository.StudentRepositoryTest.txt
+    |       TEST-com.example.demo.controller.StudentControllerTest.xml
+    |       TEST-com.example.demo.DemoApplicationTests.xml
+    |       TEST-com.example.demo.repository.StudentRepositoryTest.xml
+    |       
+    \---test-classes
+        \---com
+            \---example
+                \---demo
+                    |   DemoApplicationTests.class
+                    |   
+                    +---controller
+                    |       StudentControllerTest.class
+                    |       
+                    +---repository
+                    |       StudentRepositoryTest.class
+                    |       
+                    \---service
+                            StudentServiceTest.class
+                            
